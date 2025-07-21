@@ -30,8 +30,6 @@ def connection_string_type(db_choice):
         return "mysql://user:password@localhost/dbname"
     elif db_choice == "SQLite":
         return "sqlite:///dbname.db"
-    elif db_choice == "MongoDB":
-        return "mongodb://user:password@localhost:27017/dbname"
     else:
         return None
 
@@ -61,7 +59,7 @@ st.set_page_config(page_title="LangChain: Chat with DB")
 # ask user to choose a database
 st.session_state["db_choice"]  = st.sidebar.selectbox(
     "Choose a database",
-    ("PostgreSQL", "MySQL", "SQLite", "MongoDB"),
+    ("PostgreSQL", "MySQL", "SQLite"),
 )
 
 
