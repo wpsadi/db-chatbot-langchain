@@ -105,7 +105,7 @@ with st.expander("Model Configuration", expanded=False):
 
     model = st.selectbox(
     "Choose a model",
-    ("openai/gpt-4.1", "openai/gpt-4.1-mini", "openai/gpt-4.1-nano", "openai/gpt-4o", "openai/gpt-4o-mini", "openai/o1", "openai/o1-mini", "openai/o1-preview", "openai/o3", "openai/o3-mini", "openai/o4-mini"),
+    ("openai/gpt-5","openai/gpt-5-chat","openai/gpt-5-mini","openai/gpt-5-nano","openai/gpt-4.1", "openai/gpt-4.1-mini", "openai/gpt-4.1-nano", "openai/gpt-4o", "openai/gpt-4o-mini", "openai/o1", "openai/o1-mini", "openai/o1-preview", "openai/o3", "openai/o3-mini", "openai/o4-mini"),
     on_change=lambda: st.session_state.update({"model": ChatOpenAI(model=model)})
 )
     
